@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include, path
+from Report import views
+from django.conf.urls import url
+
 
 
 urlpatterns = [
     path('Report/', include('Report.urls')),
     path('admin/', admin.site.urls),
+    url("Employee/",views.EmployeeApiView.as_view())
 ]

@@ -7,8 +7,13 @@ class Employee(models.Model):
     Adhar=models.ImageField('Adhar_card')
     Pan =models.ImageField('Pan_card')
     PassBookFirstPage=models.ImageField('PassBookFirstPage')
-    Absence=models.BooleanField(default=False)
-    Present=models.BooleanField(default=False)
+
     # Create your models here.
     def __str__(self):
         return self.Name
+class Attendence(models.Model):
+    Attendence=models.DateField()
+    present=models.BooleanField(default=False)
+
+
+    
